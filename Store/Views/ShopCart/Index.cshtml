@@ -1,0 +1,15 @@
+﻿@model ShopCartViewModel
+<div>
+    @foreach (var el in Model.shopCart.listShopItems)
+    {
+        <div class="alert alert-warning mt-3">
+            <b>Автомобиль:</b> @el.car.name<b />
+            <p></p>
+            <b>Цена:</b> @el.car.price.ToString("c")
+        </div>
+    }
+    <hr />
+    <a class=" btn btn-danger" asp-controller="Order" asp-action="Checkout">Оплатить</a>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59896201.32598629!2d31.872303249999987!3d23.612436600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c108a410471d%3A0xcd2f831cd7ce5a87!2sLamborghini%20Milano!5e0!3m2!1sru!2sru!4v1639957415072!5m2!1sru!2sru" width="350" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
